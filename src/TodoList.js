@@ -40,6 +40,7 @@ class TodoList extends Component {
     }
 
     handleBtn () {
+        /* test */
         this.setState({
             list: [...this.state.list, this.state.inputVal],
             inputVal: ''
