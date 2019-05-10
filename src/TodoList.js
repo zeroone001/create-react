@@ -25,7 +25,7 @@ class TodoList extends Component {
                                 >
                                 {item}
                                 </li>
-                                )
+                            )
                         })
                     }
                 </ul>
@@ -34,11 +34,9 @@ class TodoList extends Component {
     }
 
     handleInput (e) {
-        // console.log(e.target.value);
         this.setState({
             inputVal: e.target.value
         })
-        // this.state.inputVal = e.target.value;
     }
 
     handleBtn () {
