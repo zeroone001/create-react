@@ -15,7 +15,8 @@ class TodoList extends Component {
             <Fragment>
                 {/* 这是一个注释 */}
                 <div>
-                    <input className="input" value={this.state.inputVal} onChange={this.handleInput.bind(this)}  />
+                    <label htmlFor="insertId">请输入内容</label>   
+                    <input id="insertId" className="input" value={this.state.inputVal} onChange={this.handleInput.bind(this)}  />
                     <button onClick={this.handleBtn.bind(this)}>提交</button>
                 </div>
                 <ul>
