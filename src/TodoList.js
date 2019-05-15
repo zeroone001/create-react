@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import './style.css';
+import TodoItem from './TodoItem.js';
 
 class TodoList extends Component {
     constructor (props) {
@@ -22,12 +23,14 @@ class TodoList extends Component {
                 <ul>
                     {
                         this.state.list.map((item, index) => {
-                            return (<li 
-                                key={index} 
-                                onClick={this.handleDelete.bind(this, index)}
-                                >
-                                {item}
-                                </li>
+                            return (
+                                <TodoItem content={item} index={index} handleDelete={this.handleDelete.bind(this)}  />
+                                // { <li 
+                                // key={index} 
+                                // onClick={this.handleDelete.bind(this, index)}
+                                // >
+                                // {item}
+                                // </li> }
                             )
                         })
                     }
