@@ -9,6 +9,9 @@ class TodoList extends Component {
             inputVal: '',
             list: ['213', 'eqweqw']
         };
+        this.handleBtn = this.handleBtn.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleInput = this.handleInput.bind(this);        
     }
 
     render () {
@@ -17,14 +20,14 @@ class TodoList extends Component {
                 {/* 这是一个注释 */}
                 <div>
                     <label htmlFor="insertId">请输入内容</label>   
-                    <input id="insertId" className="input" value={this.state.inputVal} onChange={this.handleInput.bind(this)}  />
-                    <button onClick={this.handleBtn.bind(this)}>提交</button>
+                    <input id="insertId" className="input" value={this.state.inputVal} onChange={this.handleInput}  />
+                    <button onClick={this.handleBtn}>提交</button>
                 </div>
                 <ul>
                     {
                         this.state.list.map((item, index) => {
                             return (
-                                <TodoItem content={item} index={index} handleDelete={this.handleDelete.bind(this)}  />
+                                <TodoItem content={item} index={index} handleDelete={this.handleDelete}  />
                                 // { <li 
                                 // key={index} 
                                 // onClick={this.handleDelete.bind(this, index)}
