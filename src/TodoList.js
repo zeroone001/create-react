@@ -39,7 +39,7 @@ class TodoList extends Component {
     handleDom () {
         return this.state.list.map((item, index) => {
             return (
-                <TodoItem content={item} index={index} handleDelete={this.handleDelete}  />
+                <TodoItem key={index} content={item} index={index} handleDelete={this.handleDelete}  />
             )
         })
     }
@@ -66,11 +66,12 @@ class TodoList extends Component {
     }
 
     handleDelete (index) {
-        console.log(index);
-        const list = [...this.state.list];
-        list.splice(index, 1);
-        this.setState({
-            list: list
+        this.setState((prevState) => {
+            const list = [...prevState.list];
+            list.splice(index, 1);
+            return {
+                list: list
+            }
         });
     }
 }
