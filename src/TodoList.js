@@ -1,7 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import './style.css';
 import TodoItem from './TodoItem.js';
-
+/*
+    声明式开发，
+    单向数据流，
+    视图层框架，
+    函数式编程
+*/
 class TodoList extends Component {
     constructor (props) {
         super(props);
