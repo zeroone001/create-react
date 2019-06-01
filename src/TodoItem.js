@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'; 
 
 class TodoItem extends Component {
     constructor (props) {
@@ -21,5 +22,11 @@ class TodoItem extends Component {
     }
 
 }
+
+TodoItem.propTypes = {
+    content: PropTypes.string,
+    handleDelete: PropTypes.func,
+    index: PropTypes.number
+};
 
 export default TodoItem;
