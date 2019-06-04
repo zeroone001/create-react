@@ -10,6 +10,7 @@ import TodoItem from './TodoItem.js';
 class TodoList extends Component {
     constructor (props) {
         super(props);
+        // 当组件的state或者props发生改变的时候，render函数就会重新执行
         this.state = {
             inputVal: '',
             list: ['213', 'eqweqw']
