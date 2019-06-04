@@ -13,7 +13,8 @@ class TodoList extends Component {
         // 当组件的state或者props发生改变的时候，render函数就会重新执行
         this.state = {
             inputVal: '',
-            list: ['213', 'eqweqw']
+            list: ['213', 'eqweqw'],
+            label: 'test'
         };
         this.handleBtn = this.handleBtn.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
@@ -29,6 +30,8 @@ class TodoList extends Component {
                     <input 
                         id="insertId" 
                         className="input" 
+                        aria-required="true"
+                        aria-label={this.state.label}
                         value={this.state.inputVal} 
                         onChange={this.handleInput}  />
                     <button onClick={this.handleBtn}>提交</button>
