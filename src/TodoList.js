@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import './style.css';
 import TodoItem from './TodoItem.js';
-import { TestContext } from './test-context.js';
+// import { TestContext } from './test-context.js';
 
 /*
     声明式开发，
@@ -16,7 +16,10 @@ class TodoList extends Component {
         this.state = {
             inputVal: '',
             list: ['213', 'eqweqw'],
-            label: 'test'
+            label: 'test',
+            tcontext: {
+                something: 'something'
+            }
         };
         this.handleBtn = this.handleBtn.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
@@ -39,11 +42,9 @@ class TodoList extends Component {
                     <button onClick={this.handleBtn}>提交</button>
                 </div>
                 <ul>
-                    <TestContext.Provider value="dark">
                     {
                         this.handleDom()
                     }
-                    </TestContext.Provider>
                 </ul>
             </Fragment>
             )
