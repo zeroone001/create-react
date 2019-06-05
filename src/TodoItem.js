@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'; 
+import { TestContext } from './test-context.js';
 
 class TodoItem extends Component {
     constructor (props) {
@@ -9,7 +10,7 @@ class TodoItem extends Component {
     render () {
         const { content } = this.props;
         return (
-            <li onClick={this.handleClick} key={this.props.index} >
+            <li theme={this.context} onClick={this.handleClick} key={this.props.index} >
                 {content}
             </li>
         )
@@ -31,5 +32,6 @@ TodoItem.propTypes = {
 TodoItem.defaultProps = {
     test: 'hello world'
 };
+TodoItem.contextType = TestContext;
 
 export default TodoItem;
