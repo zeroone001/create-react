@@ -10,3 +10,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * 找出变化
 * 只用新的DOM中的元素，替换老的DOM中的元素
 
+#### new
+* state 数据
+* JSX 模版
+* 数据 + 模版 结合， 生成真实的DOM， 显示
+* 生成虚拟DOM（虚拟DOM就是一个JS对象，用它来描述真实的DOM）
+
