@@ -14,5 +14,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 * state 数据
 * JSX 模版
 * 数据 + 模版 结合， 生成真实的DOM， 显示
+*
 * 生成虚拟DOM（虚拟DOM就是一个JS对象，用它来描述真实的DOM）
+* ['div', {id: 'a'}, []]
+* state发生变化
+* 生成新的虚拟DOM
+* 比较原始虚拟DOM和新的虚拟DOM的区别，找到区别中的内容
+
+#### react
+* 先生成虚拟DOM， 再生成真实的DOM
+*
 
