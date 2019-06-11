@@ -7,7 +7,7 @@ import TodoList from './TodoList.js';
 
 ReactDOM.render(
     // <Provider store="asd">
-        <TodoList />,
+        <TodoList />, 
     // </Provider>, 
     document.getElementById('root')
 );

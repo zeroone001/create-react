@@ -21,7 +21,7 @@ class TodoList extends Component {
                 something: 'something'
             }
         };
-        this.handleBtn = this.handleBtn.bind(this);
+        // this.handleBtn = this.handleBtn.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleInput = this.handleInput.bind(this);        
     }
@@ -68,7 +68,7 @@ class TodoList extends Component {
         // })
     }
 
-    handleBtn () {
+    handleBtn = () => {
         this.setState((prevState) => ({
             list: [...prevState.list, prevState.inputVal],
             inputVal: ''
