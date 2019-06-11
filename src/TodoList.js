@@ -21,6 +21,14 @@ class TodoList extends Component {
                 something: 'something'
             }
         };
+        /*
+            类里面定义的方法，单独提取出来使用的时候，需要绑定this
+            方法一： 在构造函数里面绑定this。 
+            this.handleBtn = this.handleBtn.bind(this);
+            方法二： 使用尖头函数
+            handleBtn = () => {}
+            箭头函数内部的this总是指向定义时候所在的对象
+        */
         // this.handleBtn = this.handleBtn.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
         this.handleInput = this.handleInput.bind(this);        
