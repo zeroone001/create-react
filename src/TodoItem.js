@@ -9,7 +9,7 @@ class TodoItem extends Component {
     }
     render () {
         const { content } = this.props;
-        // JSX -> JS 对象 -> 真实的DOM
+        // JSX -> JS 对象 -> 真实的DOM 
         return (
             <li theme={this.context.something} onClick={this.handleClick} key={this.props.index} >
                 {content}
